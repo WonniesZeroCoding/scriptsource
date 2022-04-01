@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 소문자로 영문 이름과 전화번호를 입력(prompt로 입력 받기) 받은 후
+      // 이름은 대문자로 바꿔서 출력하기
+      // 전화번호는 010-1234-1234 => 010-####-1234 출력
+      let input1 = prompt("소문자로 영문 이름을 입력하세요");
+      let input2 = prompt("전화 번호를 입력하세요(형식은 000-0000-0000");
+      document.write(typeof input1, input2);
+      document.write("<br>");
+      document.write("이름 : " + input1.toUpperCase() + "<br>");
+      document.write(
+        "전화번호 : " + input2.replace(input2.substring(4, 8), "####"),
+        "<br>"
+      );
+    </script>
+  </body>
+</html>

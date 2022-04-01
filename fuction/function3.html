@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      test(1, 2, 3); // 변수를 주지 않았을 때에도 Java와 달리 에러가 나지 않고 undefined로 출력함
+      function test(a, b, c, d) {
+        //변수의 값이 할당되지 않았을 때 초기값
+        c = c || 52;
+        d = d || 273;
+        document.write("a:" + a + ", b:" + b + ", c:" + c + ", d:" + d);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numArr = [52, 273, 586, 32, 57, 103, 312, 2];
+      // 최대값과 최소값 출력하기
+      let max = 0;
+      let min = 999;
+      for (let num of numArr) {
+        if (num > max) {
+          max = num;
+        }
+        if (num < min) {
+          min = num;
+        }
+      }
+      //document.write == java에서의 System.out.print();
+      document.write("최대값 : " + max + "<br>"); // <br> : 한줄 뛰어라
+      document.write("최소값 : " + min);
+    </script>
+  </body>
+</html>

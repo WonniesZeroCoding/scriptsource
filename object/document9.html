@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>simple HTML</h1>
+    </div>
+    <div id="header">
+      <p>this is a <i>simple</i>HTML file</p>
+    </div>
+    <div class="callout">
+      <p>this is as fancy aswe'll get!</p>
+    </div>
+    <p>
+      IDs (such as <span class="code">#content</span> are unique (there can only
+      be one per page).
+    </p>
+    <p>
+      Classes (such as <span class="code">.callout</span>) can be used on many
+      elements
+    </p>
+    <div id="callout2" class="callout fancy">
+      <p>A single HTML element can have multiple classes.</p>
+    </div>
+    <script>
+      //element가 추가될 영역 가져오기
+      let content = document.getElementById("content");
+      // p태그 2개 생성
+      const p1 = document.createElement("p");
+      p1.innerHTML = "I was created dynamically";
+      const p2 = document.createElement("p");
+      P2.innerHTML = "I was also created dynamically!!";
+      // 첫번째 p 태그는 content의 첫번째 자식으로
+
+      // 두번째 p 태그는 content의 마지막 자식으로 추가
+      content.appendChild(p2);
+    </script>
+  </body>
+</html>

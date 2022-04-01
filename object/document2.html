@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 name="header1" onclick="valueChange()">Header1</h1>
+    <ul>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+    </ul>
+    <h2 class="header2">Header2</h2>
+    <script>
+      //method
+      // getElementsById() : element에 id값이 존재할 때 사용
+      // getElementsByName() : element에 name 존재할 때만 사용 = NodeList
+      // getElementsByTagName() : tag로 요소 가져오기 => HTMLCollection
+      // getElementsByClassName() : class 요소 가져오기 => HTMLCollection
+      let h1 = document.getElementsByName("header1");
+      console.log(h1[0].innerHTML);
+      console.log(h1[0]);
+
+      // innerHTML, innerText : element 의 text 값을 변경
+      //                      : 태그를 사용할 수 있느냐 없느냐 차이
+      function valueChange() {
+        h1[0].innerHTML = "<i>Header3</i>";
+        //h1.innerText = "<i>Header3</i>";
+      }
+    </script>
+    <script>
+      // ul 가져오기
+      let ul = document.getElementsByTagName;
+      console.log(ul[0]);
+
+      //h2 가져오기
+      document.getElementsByClassName("header2");
+      console.log(h2);
+      console.log(h2[0]);
+    </script>
+  </body>
+</html>

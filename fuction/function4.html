@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //익명 함수
+      let sum = 0;
+      //output();  Cannot access 'output' before initialization
+      // 익명 함수는 hoisting 개념 처럼 쓸 수 없다
+      const output = function () {
+        for (var i = 1; i < 11; i++) {
+          sum += i;
+        }
+        document.write(sum);
+      };
+      output();
+      document.write("<br>"); // javascript : <br> == java : /n
+      const result = function add(a, b) {
+        return a + b;
+      };
+
+      //   add(3, 5); add is not defined
+      document.write(result(3, 5));
+    </script>
+  </body>
+</html>

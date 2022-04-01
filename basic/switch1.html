@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사용자에게 국어, 영어, 수학점수를 입력받아 평균 구하기
+      let math = parseInt(prompt("수학점수"));
+      // 자바에서는 함수에 수학점수를 넣어도 " " 안에 값이 String으로 인식되기 때문에
+      // String을 숫자 타입으로 바꿔주는 parseInt나 Number를 써서 바꿀 수 있음
+      let eng = Number(prompt("영어점수"));
+      let kor = Number(prompt("국어점수"));
+      let average = (math + eng + kor) / 3;
+      alert(average);
+      // 평균이 90 이상이면 A, 80이상이면 B, 70이상이면 C, 나머지는 D
+      // switch문
+      switch (parseInt(average / 10)) {
+        case 10:
+        case 9:
+          alert("A");
+          break;
+        case 8:
+          alert("B");
+          break;
+        case 7:
+          alert("C");
+          break;
+        default:
+          alert("D");
+          break;
+      }
+    </script>
+  </body>
+</html>

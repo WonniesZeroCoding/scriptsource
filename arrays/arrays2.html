@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = new Array(); // 배열 선언
+      arr.push(12); // 배열에 요소 추가
+      arr.push(6);
+      arr.push(14);
+      arr.push(3);
+      arr.push(9);
+      arr.push(17);
+
+      document.write(arr + "<br>");
+      document.write(arr.join("-") + "<br>"); // - 로 연결
+      document.write(arr.concat([2, 4, 6, 8, 10]) + "<br>"); // 배열 붙이기
+      document.write(arr.slice(1, 4) + "<br>"); // 1번 4번 요소 자르기
+      document.write(arr.sort() + "<br>"); //배열안 숫자는 String개념으로 다루기 때문에 sort() 안됨
+      document.write(["사당", "강남", "한남", "옥수"].sort() + "<br>");
+      document.write(["사당", "강남", "한남", "옥수"].reverse() + "<br>");
+      document.write(["Banana", "Orange", "Apple", "Mango"].reverse() + "<br>");
+      const fruits = ["Banana", "Orange", "Apple", "Mango"]; //문자는 sort가 됨
+      fruits.sort();
+      document.write(fruits + "<br>");
+      fruits.reverse(); // 배열 거꾸로(reverse)로 출력
+      document.write(fruits + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 onclick="showMsg()">함수호출</h1>
+    <button type="button" onclick="showMsg1('hello','hong')">클릭</button>
+    <!--  -->
+    <script>
+      function showMsg() {
+        alert("Hello!!");
+      }
+      function showMsg1(greeting, name) {
+        alert(greeting + "!" + name);
+      }
+    </script>
+  </body>
+</html>

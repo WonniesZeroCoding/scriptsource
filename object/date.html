@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var date1 = new Date(); //Date의 ()안에 아무것도 안넣으면 현재 날짜 가지고 옴
+      document.write(date1 + "<br>");
+      document.write("연도 : " + date1.getFullYear() + "<br>");
+      document.write("월 : " + (date1.getMonth() + 1) + "<br>"); // 1월 == 0 , 월은 0부터 시작 4월 : 3 // 제대로 월을 표현하려면 +1을 써줄 것
+      document.write("일 : " + date1.getDate() + "<br>");
+      document.write("시 : " + date1.getHours() + "<br>");
+      document.write("분 : " + date1.getMinutes() + "<br>");
+      document.write("초 : " + date1.getSeconds() + "<br>");
+      document.write(
+        "날짜를 문자열 형태로 : " + date1.toLocaleString() + "<br>"
+      );
+
+      // 새로운 특정 날짜 지정
+      let date2 = new Date(2022, 4, 1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 조건문은 자바와 동일하게 쓰임
+        1)if, 2)if~else, 3)if~else if ~ else, switch -->
+    <script>
+      // 현재 시간을 기준으로 오전인지 오후인지 출력
+
+      var date = new Date();
+      console.log(date);
+
+      var hour = date.getHours();
+
+      if (hour < 12) {
+        console.log("오전");
+      } else {
+        console.log("오후");
+      }
+    </script>
+  </body>
+</html>

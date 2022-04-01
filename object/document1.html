@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header1" onclick="">Header1</h1>
+    <h1 id="header2">Header2</h1>
+    <script>
+      //method
+      let h1 = document.getElementById("Header1"); // getElementById는 Id 값이 존재해야 사용 가능
+      console.log(h1);
+
+      let h2 = document.getElementById("Header2"); // getElementById는 Id 값이 존재해야 사용 가능
+
+      // innerHTML, innerText : element 의 text 값을 변경
+      //                      : 태그를 사용할 수 있느냐 없느냐 차이
+      function valueChange() {
+        h1.innerHTML = "<i>Header3</i>";
+        //h1.innerText = "<i>Header3</i>";
+      }
+    </script>
+  </body>
+</html>

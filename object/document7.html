@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      //div 영역 가져오기
+      //가져온 영역에 이미지 태그를 생성한 후 보여주기
+
+      let demo = document.querySelector("#demo");
+
+      let img = document.createElement("img");
+      img.src = "./머드라.jpg";
+      img.alt = "머드라";
+      demo.appendChild(img);
+    </script>
+  </body>
+</html>

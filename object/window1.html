@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // window 객체는 HTML DOM 을 다룰 수 있는 객체
+      // DOM(Document Object Model) : 웹페이지가 로드되면 브라우저가 생성하는 객체
+      // Root element : <html>
+      //      element : <head>, <body>
+      //              : <meta>, <title>
+      // DOM 형태를 유지하기 때문에 자바스크립트에서 html 요소 변경(생성), 속성 변경,
+      // css 스타일 변경 등의 작업이 가능함
+
+      //window.document.write();
+      //윈도우 사이즈
+      document.write(window.innerWidth + "<br>");
+      document.write(window.innerHeight);
+
+      // 메소드
+      // open(), close(), moveTo(), resizeTo()
+      //   window.open("http://www.naver.com");
+      window.open(
+        "./child1.html",
+        "",
+        "width=420, height=500, left=300, top=50,status=no"
+      );
+    </script>
+  </body>
+</html>
