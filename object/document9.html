@@ -36,7 +36,8 @@
       const p2 = document.createElement("p");
       P2.innerHTML = "I was also created dynamically!!";
       // 첫번째 p 태그는 content의 첫번째 자식으로
-
+      //insertbefore(삽입할 요소, 위치);
+      content.insertBefore(p1, content.firstElementChild);
       // 두번째 p 태그는 content의 마지막 자식으로 추가
       content.appendChild(p2);
     </script>
