@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="fruits" id=""">
+      <!-- 이벤트 액션-->
+      <option value="사과" id="name">사과</option>
+      <option value="오렌지" id="name">오렌지</option>
+      <option value="딸기" id="name">딸기</option>
+      <option value="바나나" id="name">바나나</option>
+      <option value="망고" id="name">망고</option>
+    </select>
+    <div>
+      <input
+        type="radio"
+        name="gender"
+        id=""
+        value="남"
+ 
+      />남자
+      <input
+        type="radio"
+        name="gender"
+        id=""
+        value="여"
+   
+      />여자
+    </div>
+    <script>
+      const fruits = document.querySelector("[name='fruits']");
+      fruits.addEventListener("change", fruitSelect);
+
+      //querySelector() : 선택자에 해당하는 첫번째 element 만 가져옴
+      //querySelectorAll() : 선택자에 해당하는 모든 element를 NodeList로 가져옴
+      const genderElement = document.querySelectorAll("[name = 'gender']");
+      genderElement.forEach((element)=>{
+        element.addEventListener('change',gender);
+      } );
+
+
+      function fruitSelect(e) {
+        //select에서 선택한 값 보여주기
+        alert(e.target.value); 
+      }
+      function gender(e) {
+        alert(e.target.value);
+
+      }
+    </script>
+  </body>
+</html>

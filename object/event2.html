@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="loadEvent()">
+    <!--화면이 처음 뜰 때(처음 문서가 로드 될 때), onload. body에 가장 많이 사용함-->
+    <input
+      type="radio"
+      name="color"
+      id=""
+      onclick="changeColor('lightblue')"
+    />파랑색
+    <input type="radio" name="color" id="" onclick="changeColor('green')" />녹색
+    <script>
+      function changeColor(color) {
+        //문서 배경색을 lightblue 혹은 green 으로 변경
+        document.body.style.background = color;
+      }
+      function loadEvent() {
+        document.body.style.background = "red";
+      }
+    </script>
+  </body>
+</html>

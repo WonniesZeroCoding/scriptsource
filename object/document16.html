@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label>이름</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label>비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label>나이</label>
+        <input type="number" name="age" id="age" />
+      </div>
+      <div>
+        <button type="submit" onclick="checkForm()">전송</button>
+        <button type="reset">취소</button>
+      </div>
+    </form>
+    <script>
+      function checkForm() {
+        event.preventDefault(); // 태그가 가지고 있는 기본 동작을 (제어)막음
+
+        // 사용자의 입력 요소 가져오기
+        let name = document.querySelector("#name");
+        // 자바 스크립트는 console.log(); 로 잘 가져왔는지 확인 가능
+        let age = document.querySelector("#age");
+        let password = document.querySelector("#password");
+
+        // 각 요소의 값들이 없으면 경고창 보내기
+        // 다시 입력할 수 있도록 포커스 주기
+        if (name.value == "") {
+          alert("이름을 확인해주세요");
+          name.focus();
+          return;
+        } else if (password.value == "") {
+          alert("비밀번호를 확인하세요");
+          password.focus();
+          return;
+        } else if (age.value == "") {
+          alert("나이를 확인하세요");
+          age.focus();
+          return;
+        }
+        // preventdefault로 막아놓은 것을 풀어서 form submit
+        document.querySelector("form").submit();
+      }
+      // 요즘 사이트는 입력 조건 값이 다 다른데 그걸 하기 위해서 정규표현식에 대해서 알아야함 (대문자 포함, 영문, 특수문자 등)
+    </script>
+  </body>
+</html>

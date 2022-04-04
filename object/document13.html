@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="name" id="name" />
+        <!-- required : 값을 꼭 받아라-->
+      </div>
+      <div>
+        <button type="button" onclick="process()">보내기</button>
+      </div>
+      <script>
+        //   let btn = document.querySelector("button");
+        function process() {
+          // form 태그 안 ★요소들의 값을 가져올 때, value속성 사용
+          // name input element(요소)를 가져온 후 사용자의 입력값을 확인
+          let name = document.querySelector("#name");
+          alert(name.value);
+        }
+      </script>
+    </form>
+  </body>
+</html>
