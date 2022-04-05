@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        display: none;
+        color: red;
+        margin-top: 0;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="name" id="" placeholder="사용자 이름 입력" />
+    <input type="button" value="보내기" />
+    <p id="result"></p>
+    <script>
+      let result = document.querySelector("#result");
+      let name = document.querySelector("[name='name']");
+      name.addEventListener("focus", function () {
+        //기존 입력 데이터가 있다면 지우기
+        name.value = "";
+        result.innerHTML = "";
+        result.style.display = "none";
+      });
+      let btn = document.querySelector("[type='button']");
+      btn.addEventListener("click", nameCheck);
+
+      function nameCheck() {
+        //tel 입력 값을 가지고 와서 전화번호 형식과 일치하는지 확인한 후
+        //일치하지 않는다면, result 란에 전화번호를 확인해 주세요 메세지 출력
+        let regex = /^[가-힣]{2,5}$/;
+        let name = document.querySelector("[name='name']").value;
+        if (!regex.test(name)) {
+          result.style.display = "block";
+          result.innerHTML = "이름을 확인해주세요";
+        }
+      }
+    </script>
+  </body>
+</html>

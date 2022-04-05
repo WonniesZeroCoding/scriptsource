@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ko = "kokokoko";
+      const koooo = "kooookoooo";
+
+      console.log(ko.match(/(ko)+/));
+      console.log(koooo.match(/(ko)+/));
+
+      const re = /(\w+)\s(\w+)/;
+      const str = "John Smith";
+      console.log("");
+      console.log(str.match(re));
+      console.log("");
+      let newStr = str.replace(re, "$2,$1");
+      console.log(newStr);
+
+      const input =
+        "Regex pro know the difference between\n" +
+        "<i>greedy</i> and <i>lazy</i> matching.";
+
+      const pattern = /<i>(.*?)<\/i>/gi; // 괄호 ( ) 를 쓰면 캡쳐링 하겠다
+      console.log("");
+      console.log(input.match(pattern)); // 캡쳐링 한 것을 받는 것은 $. 괄호가 하나 이므로 $1.
+      console.log(input.replace(pattern, "<strong>$1<\/strong>"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header1">Header1</h1>
+    <h1 id="header2">Header2</h1>
+    <!-- jquery를 사용하기 전 라이브러리 로드-->
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        // h1 첫번째 태그 가져오기
+        let header1 = $("#header1");
+        console.log(header1);
+        //text를 가져오기
+        console.log(header1.text()); //innerText
+        console.log(header1.html()); //innerHTML
+
+        //h1 두번째 태그 가져오기
+        let header2 = $("#header2");
+        //태그 안 문자 변경 --> JQuery
+        header2.html("<i>JQuery</i>");
+      });
+    </script>
+  </body>
+</html>

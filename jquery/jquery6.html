@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="header" name="" id="">Header1</h1>
+    <!-- onclick클릭을 하면 , h1_click() 함수랑 연결 -->
+    <h2>Header2</h2>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      // h1을 클릭 시, 삭제 ... document1~9까지는 생성이었음
+      $(".header").click(function () {
+        //  $(this).remove();
+        $(this).removeClass("header");
+      });
+    </script>
+  </body>
+</html>

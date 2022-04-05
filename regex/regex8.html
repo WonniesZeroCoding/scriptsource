@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="email" name="email" />
+    <input type="button" value="전송" />
+    <script>
+      const regex =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      let btn = document.querySelector("[type = 'button']");
+      btn.addEventListener("click", function () {
+        let email = document.querySelector("[type='email']");
+        if (!regex.test(email.value)) {
+          alert("이메일을 확인해주세요");
+        }
+      });
+    </script>
+  </body>
+</html>

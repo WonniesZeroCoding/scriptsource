@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        display: none;
+        color: red;
+        margin-top: 0;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="tel"
+      id=""
+      placeholder="000-0000-0000 형식으로 입력"
+    />
+    <input type="button" value="보내기" />
+    <p id="result"></p>
+    <script>
+      let result = document.querySelector("#result");
+      let tel = document.querySelector("[name='tel]");
+      tel.addEventListener("focus", function () {
+        //기존 입력 데이터가 있다면 지우기
+        tel.value = "";
+        result.innerHTML = "";
+        result.style.display = "none";
+      });
+      let btn = document.querySelector("[type='button']");
+      btn.addEventListener("click", telCheck);
+
+      function telCheck() {
+        //tel 입력 값을 가지고 와서 전화번호 형식과 일치하는지 확인한 후
+        //일치하지 않는다면, result 란에 전화번호를 확인해 주세요 메세지 출력
+        let regex = /^\d{2,3}-\d{3,4}-\d{4}$/;
+        let tel = document.querySelector("[name='tel']").value;
+        if (!regex.test(tel)) {
+          result.style.display = "block";
+          result.innerHTML = "전화번호를 확인해주세요";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+    </ul>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      //li 태그 모두 가져오기
+      //css selector 사용해서 가져올 수 있음
+      let liList = $("li");
+      console.log(liList);
+
+      $.each(liList, function (idx, item) {
+        console.log(item);
+        console.log($(this).text());
+      });
+
+      console.log("");
+      // 자바스크립트
+      let liList2 = document.querySelectorAll("li");
+      liList2.forEach((i) => {
+        console.log(i);
+      });
+    </script>
+  </body>
+</html>

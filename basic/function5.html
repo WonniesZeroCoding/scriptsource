@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="저장" onclick="test()" />
+    <script>
+      //callback 함수
+      //코드를 통해서 명시적으로 호출하는 함수가 아니라 개발자는 단지 함수를 등록하기만 하고
+      //어떤 이벤트가 발생했을 때, 혹은 특정 시점에 도달했을 때, 시스템에서 호출되는 함수
+
+      //위에서 아래로 차례대로 수행됨 : 동기화 라고 함 <--> 순서대로 실행이 되지 않은 경우 : 비동기화 라고 함
+      console.log("시작");
+      setTimeout(function () {
+        console.log("3초가 지났습니다");
+      }, 3000);
+      console.log("마무리");
+    </script>
+  </body>
+</html>
