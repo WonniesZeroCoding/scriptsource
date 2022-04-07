@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+
+          let result = "";
+          json.forEach((element) => {
+            result += "<ul><li>id : " + element.id + "</li>";
+            result += "<li>name : " + element.name + "</li>";
+            result += "<li>username : " + element.username + "</li>";
+            result += "<li>email : " + element.email + "</li>";
+            result += "<li>address street : " + element.adress.street + "</li>";
+            result += "<li>address suite : " + element.adress.suite + "</li>";
+            result += "<li>address city : " + element.adress.city + "</li>";
+            result +=
+              "<li>address zipcode : " + element.adress.zipcode + "</li>";
+            result += "<li>address geo : " + element.adress.geo.lat + "</li>";
+          });
+
+          document.querySelector("div").innerHTML = result;
+        });
+    </script>
+  </body>
+</html>

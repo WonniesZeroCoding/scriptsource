@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+      // $.ajax({
+      //     url:'',
+      //     type:'get', //기본 get
+      //     data: FormData,
+      //     dataType:'요청데이터 타입',//html
+      //     success:function(data){
+      //         //서버로부터 요청한 결과가 도착하면 호출
+      //     },
+      //     error:function() {
+      //         //서버가 응답을 하지 않는 경우
+      //     }
+      // })
+
+      $.ajax({
+        url: "./data/test.txt",
+        dataType: "text",
+        success: function (data) {
+          console.log(data);
+          $("div").html(data);
+        },
+        error: function (xhr, status, error) {
+          console.log(status);
+        },
+      });
+    </script>
+  </body>
+</html>

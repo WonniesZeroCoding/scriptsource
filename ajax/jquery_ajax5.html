@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+      $.getJSON({
+        url: "https://jsonplaceholder.typicode.com/todos/1",
+        success: function (data) {
+          let result = "<ul><li>userId : " + data.userId + "</li>";
+          result += "<li>id : " + data.id + "</li>";
+          result += "<li>title : " + data.title + "</li>";
+          result += "<li>completed : " + data.completed + "</li></ul>";
+
+          $("div").html(result);
+        },
+      });
+    </script>
+  </body>
+</html>

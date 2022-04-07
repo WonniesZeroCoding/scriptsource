@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/users") // 외부에서 제공하는 JSON 파일 접근
+        .then((response) => {
+          return response.text();
+        })
+        .then((json) => {
+          let response = JSON.parse(json);
+          console.log(json);
+          console.log(response);
+          let result = "";
+          response.forEach((element) => {
+            result += "<hr>";
+            result += "<ul>";
+            result += "<li> id : " + element.id + "</li>";
+            result += "<li> name : " + element.name + "</li>";
+            result += "<li> username : " + element.username + "</li>";
+            result += "<li> email : " + element.email + "</li>";
+            result += "<li> Address <ul>";
+            result += "<li> street : " + element.address.street + "</li>";
+            result += "<li> suite : " + element.address.suite + "</li>";
+            result += "<li> city : " + element.address.city + "</li>";
+            result += "<li> zipcode : " + element.address.zipcode + "</li>";
+            result += "<li> geo <ul>";
+            result += "<li> lat : " + element.address.geo.lat + "</li>";
+            result += "<li> lng : " + element.address.geo.lng + "</li>";
+            result += "</ul></li>";
+            result += "</ul></li>";
+            result += "<li> phone : " + element.phone + "</li>";
+            result += "<li> website : " + element.website + "</li>";
+            result += "<li> company <ul>";
+            result += "<li> name : " + element.company.name + "</li>";
+            result +=
+              "<li> catchPhrase : " + element.company.catchPhrase + "</li>";
+            result += "<li> bs : " + element.company.bs + "</li>";
+            result += "</ul></li>";
+            result += "</ul>";
+          });
+          let div = document.querySelector("div");
+          div.innerHTML += result;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

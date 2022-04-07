@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-text">회원가입</h6>
+        </div>
+        <div class="card-body">
+          <form action="" method="post" id="signup">
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label"
+                >아이디(영문자,숫자 조합으로 6~12자리)</label
+              >
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  name="userid"
+                  id="userid"
+                  class="form-control"
+                  placeholder="아이디"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label"
+                >비밀번호(영문자,숫자,특수문자 조합으로 8~15자리)</label
+              >
+              <div class="col-sm-6">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="비밀번호"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label">비밀번호 재입력</label>
+              <div class="col-sm-6">
+                <input
+                  type="password"
+                  name="confirm_password"
+                  id="confirm_password"
+                  class="form-control"
+                  placeholder="비밀번호 재입력"
+                />
+              </div>
+            </div>
+            <!-- 비밀번호 재입력 종료-->
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label">성별</label>
+              <div class="col-sm-6">
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="genderM"
+                    value="남"
+                    class="form-check-input"
+                  />
+                  <label class="form-check-label">남</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="genderF"
+                    value="여"
+                    class="form-check-input"
+                  />
+                  <label class="form-check-label">여</label>
+                </div>
+              </div>
+            </div>
+            <!-- 성별 종료-->
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label">이메일</label>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="이메일"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <!--이메일 종료-->
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label">핸드폰</label>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="핸드폰(-없이 입력)"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <!--핸드폰 종료-->
+            <div class="form-group row">
+              <label class="col-sm-6 col-form-label">취미</label>
+              <div class="col-sm-6">
+                <div class="form-check form-check-inline">
+                  <input
+                    type="checkbox"
+                    name="hobby"
+                    id="movie"
+                    value="영화감상"
+                    class="form-check-input"
+                  />
+                  <label class="form-check-label">영화감상</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="checkbox"
+                    name="hobby"
+                    id="read"
+                    value="독서"
+                    class="form-check-input"
+                  />
+                  <label class="form-check-label">독서</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="checkbox"
+                    name="hobby"
+                    id="game"
+                    value="게임"
+                    class="form-check-input"
+                  />
+                  <label class="form-check-label">게임</label>
+                </div>
+              </div>
+            </div>
+            <!--취미 종료-->
+            <div class="form-group row"></div>
+            <div class="col-sm-8 offset-sm-4">
+              <button type="submit" class="btn btn-primary" name="signup">
+                Sign up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="./register.js"></script>
+  </body>
+</html>
